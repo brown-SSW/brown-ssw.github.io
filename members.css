@@ -1,0 +1,230 @@
+body {
+  margin: 0 2vw;
+}
+
+#main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color: #FFF;
+  font-size: 1.25rem;
+  z-index: 35;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2em;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+#links li {
+  height: inherit;
+}
+
+#main-navbar a {
+  color: #FFF;
+  text-decoration: none;
+  height: 2em;
+  margin: 0 5px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+#main-navbar a:hover {
+  color: #000;
+  background-color: #FFF;
+}
+
+#home-link {
+  display: block;
+  margin-right: auto;
+}
+
+#title-section {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: "plant title";
+  background-color: white;
+  margin: 5vh 0;
+}
+
+#dropdown {
+  margin-left: auto;
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #000;
+  width: fit-content;
+  float: inline-end;
+}
+
+#dropdown-button {
+  cursor: pointer;
+  height: 40px;
+}
+
+#dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  background-color: inherit;
+  width: fit-content;
+  margin: 40px 0 0 0;
+}
+
+#dropdown-list a {
+  width: 100%;
+  margin: 0;
+}
+
+#title-and-banner {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  height: 140px;
+  width: 100%;
+}
+
+#horizontal-plant {
+  grid-area: plant;
+  width: 43vw;
+  margin-top: 30%;
+}
+
+#members-page-title {
+  grid-area: title;
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  font-family: papyrus, Helvetica, sans-serif;
+  font-size: 5.8vw;
+  color: #53826d;
+  opacity: 60%;
+}
+
+#officers-content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.officer-tile {
+  color: #53826d;
+  opacity: 70%;
+  text-align: center;
+  font-size: max(5.5vmin, 40px);
+}
+
+.officer-class-year {
+  padding-top: 1vh;
+  font-size: 4vh;
+  opacity: 60%;
+}
+
+.officer-concentration {
+  font-size: 4vh;
+  opacity: 60%;
+}
+
+.officer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.officer-info > * {
+  margin: 0;
+}
+
+#officers-section {
+  margin-bottom: 10vh;
+}
+
+.class-year-header::before, .class-year-header::after {
+  content: "";
+  border-bottom: 3px solid;
+  margin: auto;
+  color: #53826d;
+}
+
+.class-year-header::before {
+  flex: 1 1;
+  margin-right: 15px;
+}
+
+.class-year-header::after {
+  flex: 4 1;
+  margin-left: 15px;
+}
+
+.class-year-header {
+  display: flex;
+  flex-direction: row;
+  font-size: max(7vmin, 50px);
+  margin: 20px 0;
+  color: #53826d;
+  opacity: 70%;
+}
+
+.members-in-year-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 20px 10px;
+  margin: 0 0 50px 0;
+  justify-items: center;
+  align-items: center;
+}
+
+.members-in-year-list > li {
+  flex: 1 0 12.5%;
+  align-self: flex-start;
+}
+
+.member-image {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .officer-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .class-year-header::before {
+    flex: 1 1;
+    margin-right: 15px;
+  }
+
+  .class-year-header::after {
+    flex: 1 1;
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #links {
+    display: none;
+  }
+
+  #dropdown {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=members.css.map */

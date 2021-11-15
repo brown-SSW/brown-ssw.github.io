@@ -1,0 +1,353 @@
+html, body {
+  margin: 0;
+  width: 100%;
+}
+
+#main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color: #FFF;
+  font-size: 1.25rem;
+  z-index: 35;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2em;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+#links li {
+  height: inherit;
+}
+
+#main-navbar a {
+  color: #FFF;
+  text-decoration: none;
+  height: 2em;
+  margin: 0 5px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+#main-navbar a:hover {
+  color: #000;
+  background-color: #FFF;
+}
+
+#home-link {
+  display: block;
+  margin-right: auto;
+}
+
+#dropdown {
+  margin-left: auto;
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #000;
+  width: fit-content;
+  float: inline-end;
+}
+
+#dropdown-button {
+  cursor: pointer;
+  height: 40px;
+}
+
+#dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  background-color: inherit;
+  width: fit-content;
+  margin: 40px 0 0 0;
+}
+
+#dropdown-list a {
+  width: 100%;
+  margin: 0;
+}
+
+#content-wrapper {
+  margin: 20px 5px 0 5px;
+}
+
+#title-section {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: min-content min-content min-content;
+  grid-template-areas: "leaf title plant";
+  background-color: white;
+  margin: 10vh 0 5vh 0;
+  align-items: center;
+}
+
+#projects-page-title {
+  grid-area: title;
+  text-align: center;
+  font-family: papyrus, Helvetica, sans-serif;
+  font-size: 10vmin;
+  color: #53826d;
+  opacity: 65%;
+  height: fit-content;
+}
+
+#vertical-plant {
+  grid-area: plant;
+  height: 40vmin;
+}
+
+#leaf2 {
+  grid-area: leaf;
+  height: 40vmin;
+}
+
+.year-header::before, .year-header::after {
+  content: "";
+  border-bottom: 3px solid;
+  margin: auto;
+}
+
+.year-header::before {
+  flex: 1 1;
+}
+
+.year-header::after {
+  flex: 4 1;
+}
+
+.year-header {
+  display: flex;
+  flex-direction: row;
+  font-size: max(8vmin, 50px);
+  color: #53826d;
+  opacity: 65%;
+}
+
+#project-card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 0 40px;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+}
+
+.project-card {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: #53826d 0px 3px 8px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  overflow: hidden;
+}
+
+.project-card-title {
+  margin: 0 5px;
+}
+
+.project-card-description {
+  margin: 0 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: max-content;
+}
+
+.contributors-container {
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
+}
+
+.contributors-header:before, .contributors-header:after {
+  content: "";
+  border-bottom: #81AA7A 2px solid;
+  margin: auto;
+}
+
+.contributors-header:before {
+  flex: 1 1;
+  margin-right: 3px;
+}
+
+.contributors-header:after {
+  flex: 4 1;
+  margin-left: 3px;
+}
+
+.contributors-header {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.contributors-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contributors-list li {
+  display: inline;
+}
+
+.contributors-list li:not(:last-child):after {
+  content: ",";
+}
+
+#modal-box-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#modal-box {
+  position: relative;
+  width: 50%;
+  min-height: 100%;
+  background-color: white;
+  font-size: 1vmin;
+  outline: 5px solid #81AA7A;
+  display: grid;
+  grid-auto-columns: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#close-modal-button {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+#close-modal-button:hover {
+  background-color: red;
+  color: white;
+}
+
+#modal-project-title {
+  font-size: 5em;
+  margin: 0;
+}
+
+#modal-description {
+  font-size: 3em;
+  min-width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+#modal-image {
+  width: fit-content;
+  object-fit: contain;
+}
+
+#modal-contributors-container {
+  align-self: flex-end;
+}
+
+#modal-contributors-header {
+  font-size: 3.25em;
+  margin: 0;
+  display: flex;
+}
+
+#modal-contributors-header:after {
+  content: "";
+  border-bottom: black 2px solid;
+  margin: auto;
+  flex: 4 1;
+  margin-left: 3px;
+}
+
+#modal-contributors-list {
+  list-style: none;
+  padding: 0;
+}
+
+#modal-contributors-list > li {
+  display: inline;
+  font-size: 2.25em;
+}
+
+#modal-contributors-list > li:not(:last-child):after {
+  content: ", ";
+}
+
+@media screen and (max-width: 800px) {
+  .year-header::before, .year-header::after {
+    flex: 1 1;
+  }
+
+  #project-card-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #modal-content {
+    max-height: 65%;
+  }
+
+  #modal-box {
+    height: 100%;
+    width: 70%;
+    font-size: max(1vmin, 6px);
+  }
+
+  #modal-image {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #links {
+    display: none;
+  }
+
+  #dropdown {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=projects.css.map */

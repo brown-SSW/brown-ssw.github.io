@@ -1,0 +1,27 @@
+{
+  "name": "project-s4sw-website",
+  "version": "1.0.0",
+  "description": "Scientists for a Sustainable World website",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FullStackAtBrownTeam/project-s4sw-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FullStackAtBrownTeam/project-s4sw-website/issues"
+  },
+  "homepage": "https://github.com/FullStackAtBrownTeam/project-s4sw-website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-server": "^0.12.3",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
